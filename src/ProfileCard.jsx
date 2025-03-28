@@ -4,8 +4,17 @@ import { SiLeetcode } from "react-icons/si";
  import image from "../public/image.jpg"
 const ProfileCard = () => {
     const handleViewResume = () => {
-        window.open('../public/Rinsha k.pdf', '_blank'); 
+        window.open('../public/rinsha_mernstack_resume.pdf', '_blank'); 
       };
+      const handleDownloadResume = () => {
+        const link = document.createElement("a");
+        link.href = "../public/rinsha_mernstack_resume.pdf"; // Path to your resume in the public folder
+        link.download = "rinsha_mernstack_resume.pdf"; // Desired file name for the download
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+      
   return (
    
     <div className="bg-[#31363F] w-80  rounded-xl overflow-hidden shadow-lg">
@@ -39,11 +48,25 @@ const ProfileCard = () => {
         </div>
         
         <button
-      onClick={handleViewResume}
-      className="w-full bg-purple-600 mt-15 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors"
-    >
-      View Resume
-    </button>
+  onClick={handleDownloadResume}
+  className="w-full flex items-center justify-center gap-2 bg-purple-600 mt-4 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors"
+>
+  Download CV
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth="1.5"
+    stroke="currentColor"
+    className="w-6 h-6"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+    />
+  </svg>
+</button>
       </div>
     </div>
   );
