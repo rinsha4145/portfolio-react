@@ -44,10 +44,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-black w-1/4 h-14 rounded-2xl flex justify-around items-center">
+    <div className="bg-[#EEEEEE] w-1/4 h-14 rounded-2xl flex justify-around items-center">
       {navItems.map((item) => (
         <div key={item.id} className="relative group" onClick={() => setActiveBar(item.id)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="currentColor" className={`size-6 w-7 h-7  ${activeBar === item.id ? 'bg-amber-400 p-1 rounded-lg' : ''}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="#222831" className={`size-9  p-1 ${activeBar === item.id ? 'bg-[#31363F]  rounded-lg stroke-[#EEEEEE]' : ''}`}>
             {item.icon}
           </svg>
           <span className="absolute bg-gray-600 rounded-md p-1 text-xs top-14 -translate-y-1/2 text-white opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300">

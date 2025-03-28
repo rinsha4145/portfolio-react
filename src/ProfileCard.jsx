@@ -4,20 +4,21 @@ import { SiLeetcode } from "react-icons/si";
  import image from "../public/image.jpg"
 const ProfileCard = () => {
     const handleViewResume = () => {
-        window.open('../public/Rinsha k.pdf', '_blank'); // Replace with your resume path
+        window.open('../public/Rinsha k.pdf', '_blank'); 
       };
   return (
-    <div className="bg-gray-900 w-80 rounded-xl overflow-hidden shadow-lg">
-      <div className="relative">
-        <div className="absolute inset-0 bg-purple-700 opacity-30"></div>
+   
+    <div className="bg-[#31363F] w-80  rounded-xl overflow-hidden shadow-lg">
+      <div className="relative p-10">
+        <div className="absolute  inset-0 bg-[#31363F] opacity-30"></div>
         <img 
           src={image} 
           alt="Profile" 
-          className="w-full h-80 object-fit"
+          className=" h-70 rounded-lg object-fit"
         />
       </div>
       
-      <div className="p-6 text-center">
+      <div className=" text-center">
         <h2 className=" text-4xl font-bold mb-2">Rinsha k</h2>
         <p className=" text-md mb-2">MernStack Developer</p>
         <p className="text-md mb-6">Calicut, Kerala</p>
