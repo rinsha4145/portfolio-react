@@ -8,8 +8,8 @@ const ProfileCard = () => {
       };
       const handleDownloadResume = () => {
         const link = document.createElement("a");
-        link.href = "../public/rinsha_mernstack_resume.pdf"; // Path to your resume in the public folder
-        link.download = "rinsha_mernstack_resume.pdf"; // Desired file name for the download
+        link.href = "/rinsha_mernstack_resume.pdf"; 
+        link.download = "rinsha_mernstack_resume.pdf"; 
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
