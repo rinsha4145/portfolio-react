@@ -21,7 +21,7 @@ export default function About() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <h1 className="font-sans  text-7xl">
+        <h1 className="text-4xl sm:text-6xl font-bold leading-tight text-white">
           Transforming Ideas into <br /> Scalable{' '}
           <span className="text-[#76ABAE]">Web Solutions</span>
         </h1>

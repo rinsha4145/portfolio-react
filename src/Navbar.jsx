@@ -4,7 +4,6 @@ import { MyContext } from './Context';
 export default function Navbar() {
   const { activeBar, setActiveBar } = useContext(MyContext);
 
-  // Data for icons
   const navItems = [
     {
       id: 'about',
@@ -44,10 +43,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-[#EEEEEE] w-1/4 h-14 rounded-2xl flex justify-around items-center">
+    <div className="bg-[#EEEEEE] w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-14 rounded-2xl flex justify-around items-center">
       {navItems.map((item) => (
         <div key={item.id} className="relative group" onClick={() => setActiveBar(item.id)}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="#222831" className={`size-9  p-1 ${activeBar === item.id ? 'bg-[#31363F]  rounded-lg stroke-[#EEEEEE]' : ''}`}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="#222831" className={`size-9 p-1 ${activeBar === item.id ? 'bg-[#31363F] rounded-lg stroke-[#EEEEEE]' : ''}`}>
             {item.icon}
           </svg>
           <span className="absolute bg-gray-600 rounded-md p-1 text-xs top-14 -translate-y-1/2 text-white opacity-0 group-hover:opacity-100 cursor-pointer transition-opacity duration-300">

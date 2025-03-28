@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { motion } from 'framer-motion';
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -59,10 +58,10 @@ const ContactPage = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="p-28 flex justify-center items-center">
+      <div className="p-20 flex justify-center items-center">
         <div className="w-full max-w-xl">
           <motion.h1
-            className="text-4xl font-bold text-white mb-8"
+           className="text-4xl sm:text-6xl font-bold leading-tight text-white"
             variants={itemVariants}
           >
             Let's Create Something <span className="text-purple-500">Amazing</span>
