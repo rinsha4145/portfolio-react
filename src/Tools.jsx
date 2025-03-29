@@ -1,4 +1,5 @@
 import React, { useState, memo } from 'react';
+import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaJs, FaDatabase } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiTypescript, SiRedux, SiTailwindcss, SiExpress, SiAxios, SiSocketdotio } from "react-icons/si";

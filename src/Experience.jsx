@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const Experience = () => {
   const experiences = [
@@ -39,7 +40,7 @@ const Experience = () => {
       variants={containerVariants}
     >
       <motion.h1
-       className="text-4xl sm:text-6xl font-bold leading-tight text-white"
+        className="font-sans text-[#EEEEEE] text-7xl"
         variants={itemVariants}
       >
         Internship <span className="text-[#76ABAE]">Experience</span>
@@ -47,9 +48,9 @@ const Experience = () => {
 
       {experiences.map((exp, index) => (
         <motion.div key={index} className="mb-8" variants={itemVariants}>
-          <h2 className="text-2xl text-white font-semibold">{exp.title}</h2>
-          <p className="text-white mb-4">{exp.duration}</p>
-          <ul className="list-disc text-white list-inside space-y-2">
+          <h2 className="text-2xl font-semibold">{exp.title}</h2>
+          <p className="text-yellow-400 mb-4">{exp.duration}</p>
+          <ul className="list-disc list-inside space-y-2">
             {exp.details.map((detail, i) => (
               <motion.li key={i} variants={itemVariants}>
                 {detail}
