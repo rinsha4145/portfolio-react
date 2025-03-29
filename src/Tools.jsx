@@ -2,12 +2,12 @@ import React, { useState, memo } from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, FaJs, FaDatabase } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
-import { SiTypescript, SiRedux, SiTailwindcss, SiExpress, SiAxios, SiSocketdotio } from "react-icons/si";
+import { SiTypescript, SiRedux, SiTailwindcss, SiExpress, SiAxios, SiSocketdotio, SiRender, SiVercel } from "react-icons/si";
 
 // Memoized ToolCard to prevent unnecessary re-renders
 const ToolCard = memo(({ icon, name, description, link }) => (
   <motion.div
-    whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}
+    whileHover={{  boxShadow: "0 10px 25px rgba(0,0,0,0.2)" }}
     whileTap={{ scale: 0.97 }}
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ const Tools = () => {
       link: 'https://redux.js.org/' 
     },
     { 
-      name: 'HTML', 
+      name: 'HTML5', 
       description: 'Markup Language', 
       icon: <FaHtml5 className="text-orange-500 w-6 h-6" />, 
       link: 'https://developer.mozilla.org/en-US/docs/Web/HTML' 
@@ -84,12 +84,6 @@ const Tools = () => {
       description: 'Version Control System', 
       icon: <FaGitAlt className="text-red-500 w-6 h-6" />, 
       link: 'https://git-scm.com/' 
-    },
-    { 
-      name: 'Node.js', 
-      description: 'JavaScript Runtime', 
-      icon: <FaNodeJs className="text-green-600 w-6 h-6" />, 
-      link: 'https://nodejs.org/' 
     },
     { 
       name: 'Express.js', 
@@ -114,6 +108,18 @@ const Tools = () => {
       description: 'Real-Time Communication', 
       icon: <SiSocketdotio className="text-[#FAF0E6] w-6 h-6" />, 
       link: 'https://socket.io/' 
+    },
+    { 
+      name: 'Render', 
+      description: 'Real-Time Communication', 
+      icon: <SiRender className="text-[#FAF0E6] w-6 h-6" />, 
+      link: 'https://render.com/' 
+    },
+    { 
+      name: 'Vercel', 
+      description: 'Real-Time Communication', 
+      icon: <SiVercel className="text-[#FAF0E6] w-6 h-6" />, 
+      link: 'https://vercel.com/' 
     },
   ];
 

@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { motion } from 'framer-motion'
 import Projects from './Projects'
 import Tools from './Tools'
 import Experience from './Experience'
 import ContactPage from './Contact'
+import { MyContext } from './Context'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -11,6 +12,11 @@ const sectionVariants = {
 }
 
 export default function About() {
+    const { setActiveBar } = useContext(MyContext);
+  
+  const handleViewResume = () => {
+    window.open('../public/rinsha_mernstack_resume.pdf', '_blank'); // Replace with your resume path
+  };
   return (
     <div className="bg-[#352F44] text-[#FAF0E6]">
       {/* Hero Section */}
@@ -49,13 +55,15 @@ export default function About() {
                 className="bg-gradient-to-r from-[#5C5470] to-[#B9B4C7] text-[#FAF0E6] py-3 px-8 rounded-full font-medium mr-4 shadow-lg hover:shadow-xl transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={handleViewResume}
               >
-                View Portfolio
+                View Resume
               </motion.button>
               <motion.button
                 className="border-2 border-[#B9B4C7] text-[#FAF0E6] py-3 px-8 rounded-full font-medium shadow-lg hover:bg-[#5C5470] hover:border-[#5C5470] transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={()=>setActiveBar("contact")}
               >
                 Contact Me
               </motion.button>
@@ -66,7 +74,7 @@ export default function About() {
 
       {/* Projects Section */}
       <motion.section
-        className="py-16"
+        className=""
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -78,7 +86,7 @@ export default function About() {
 
       {/* Tools Section */}
       <motion.section
-        className="py-16 bg-[#352F44]"
+        className=" "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -90,7 +98,7 @@ export default function About() {
 
       {/* Experience Section */}
       <motion.section
-        className="py-16 bg-[#5C5470]"
+        className=" "
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -102,7 +110,7 @@ export default function About() {
 
       {/* Contact Section */}
       <motion.section
-        className="py-16 bg-[#352F44]"
+        className=" bg-[#352F44]"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
