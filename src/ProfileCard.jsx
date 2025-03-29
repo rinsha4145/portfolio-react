@@ -15,15 +15,19 @@ const ProfileCard = () => {
       
   return (
    
-    <div className="bg-[#31363F] w-80  rounded-xl overflow-hidden shadow-lg">
-      <div className="relative p-10">
-        <div className="absolute  inset-0 bg-[#31363F] opacity-30"></div>
-        <img 
-          src={image} 
-          alt="Profile" 
-          className=" h-70 rounded-lg object-fit"
-        />
-      </div>
+    <div className="bg-[#B9B4C7] w-80  rounded-xl overflow-hidden shadow-lg">
+     <div className="relative p-12">
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-[#352F44] opacity-30 rounded-lg pointer-events-none"></div>
+  
+  {/* Profile Image */}
+  <img 
+    src={image} 
+    alt="Profile" 
+    className="h-[280px] w-full rounded-lg object-cover"
+  />
+</div>
+
       
       <div className=" text-center">
         <h2 className=" text-4xl font-bold mb-2">Rinsha k</h2>
@@ -44,7 +48,7 @@ const ProfileCard = () => {
             <FaEnvelope />
           </a>
         </div>
-        
+        <div className='flex justify-center p-5'>
         <button
   onClick={handleDownloadResume}
   className="w-full flex items-center justify-center gap-2 bg-purple-600 mt-4 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors"
@@ -65,6 +69,7 @@ const ProfileCard = () => {
     />
   </svg>
 </button>
+</div>
       </div>
     </div>
   );

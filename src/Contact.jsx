@@ -62,7 +62,7 @@ const ContactPage = () => {
       <div className="p-28 flex justify-center items-center">
         <div className="w-full max-w-xl">
           <motion.h1
-            className="text-4xl font-bold text-white mb-8"
+             className="text-4xl sm:text-6xl font-bold leading-tight "
             variants={itemVariants}
           >
             Let's Create Something <span className="text-purple-500">Amazing</span>

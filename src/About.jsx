@@ -12,26 +12,61 @@ const sectionVariants = {
 
 export default function About() {
   return (
-    <div className="space-y-20">
-      
+    <div className="bg-[#352F44] text-[#FAF0E6]">
       {/* Hero Section */}
-      <motion.div
+      <motion.section
+        className="py-20 px-4 max-w-6xl mx-auto"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
+        variants={sectionVariants}
       >
-        <h1 className="font-sans  text-7xl">
-          Transforming Ideas into <br /> Scalable{' '}
-          <span className="text-[#76ABAE]">Web Solutions</span>
-        </h1>
-        <p className="text-lg text-[#EEEEEE] mt-4">
-          Passionate about building dynamic and user-friendly web applications. I specialize in turning innovative ideas into full-stack solutions using MongoDB, Express.js, React, and Node.js, delivering seamless and responsive user experiences.
-        </p>
-      </motion.div>
+        <div className="relative">
+          {/* Decorative elements */}
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#B9B4C7] rounded-full opacity-10"></div>
+          <div className="absolute top-20 right-0 w-20 h-20 bg-[#5C5470] rounded-full opacity-20"></div>
+          
+          <div className="relative z-10">
+            <h1 className="text-4xl sm:text-6xl font-bold leading-tight">
+              Transforming Ideas into <br /> Scalable{' '}
+              <span className="text-[#B9B4C7]">Web Solutions</span>
+            </h1>
+            <div className="w-24 h-1 bg-[#B9B4C7] mt-6 mb-6"></div>
+            <p className="text-lg text-[#FAF0E6] mt-4 max-w-3xl">
+              Passionate about building dynamic and user-friendly web applications. 
+              I specialize in turning innovative ideas into full-stack solutions using 
+              MongoDB, Express.js, React, and Node.js, delivering seamless and responsive user experiences.
+            </p>
+            
+            <motion.div 
+              className="mt-10"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+            >
+              <motion.button
+                className="bg-gradient-to-r from-[#5C5470] to-[#B9B4C7] text-[#FAF0E6] py-3 px-8 rounded-full font-medium mr-4 shadow-lg hover:shadow-xl transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                View Portfolio
+              </motion.button>
+              <motion.button
+                className="border-2 border-[#B9B4C7] text-[#FAF0E6] py-3 px-8 rounded-full font-medium shadow-lg hover:bg-[#5C5470] hover:border-[#5C5470] transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Me
+              </motion.button>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
 
       {/* Projects Section */}
-      <motion.div
+      <motion.section
+        className="py-16"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -39,10 +74,11 @@ export default function About() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <Projects />
-      </motion.div>
+      </motion.section>
 
       {/* Tools Section */}
-      <motion.div
+      <motion.section
+        className="py-16 bg-[#352F44]"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -50,10 +86,11 @@ export default function About() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <Tools />
-      </motion.div>
+      </motion.section>
 
       {/* Experience Section */}
-      <motion.div
+      <motion.section
+        className="py-16 bg-[#5C5470]"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -61,10 +98,11 @@ export default function About() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <Experience />
-      </motion.div>
+      </motion.section>
 
       {/* Contact Section */}
-      <motion.div
+      <motion.section
+        className="py-16 bg-[#352F44]"
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
@@ -72,7 +110,7 @@ export default function About() {
         transition={{ duration: 0.7, ease: 'easeOut' }}
       >
         <ContactPage />
-      </motion.div>
+      </motion.section>
     </div>
   )
 }
