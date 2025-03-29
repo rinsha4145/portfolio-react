@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import Projects from './Projects'
 import Tools from './Tools'
 import Experience from './Experience'
