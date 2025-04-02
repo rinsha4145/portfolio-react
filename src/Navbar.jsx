@@ -44,7 +44,7 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="bg-[#FAF0E6] w-1/4 h-14 rounded-2xl flex justify-around items-center">
+    <div className="bg-[#B9B4C7] w-1/4 h-14 rounded-2xl flex justify-around items-center">
       {navItems.map((item) => (
         <div key={item.id} className="relative group" onClick={() => setActiveBar(item.id)}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1" stroke="#222831" className={`size-9  p-1 ${activeBar === item.id ? 'bg-[#31363F]  rounded-lg stroke-[#EEEEEE]' : ''}`}>

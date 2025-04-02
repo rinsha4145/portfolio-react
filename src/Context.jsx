@@ -1,12 +1,16 @@
 // Context.jsx
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 // Create context
 export const MyContext = createContext(null);
 
 // Provider component
 const MyProvider = ({ children }) => {
-  const [activeBar, setActiveBar] = useState("about");
+  const initialBar = sessionStorage.getItem("activeBar") || "about";
+  const [activeBar, setActiveBar] = useState(initialBar);
+  useEffect(() => {
+    sessionStorage.setItem("activeBar", activeBar);
+  }, [activeBar]);
 
   return (
     <MyContext.Provider value={{ activeBar, setActiveBar }}>

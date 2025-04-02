@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
+import { toast } from "react-toastify";
 
 const ContactPage = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [submitStatus, setSubmitStatus] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitStatus('Sending...');
 
     // Environment variables
     const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -26,14 +25,14 @@ const ContactPage = () => {
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then(() => {
-        setSubmitStatus('Message sent successfully!');
+        toast.success('Message sent successfully!');
         setName('');
         setEmail('');
         setMessage('');
       })
       .catch((error) => {
         console.error('Error sending email:', error);
-        setSubmitStatus('Failed to send message. Please try again.');
+        toast.error('Failed to send message. Please try again.');
       });
   };
 
@@ -54,7 +53,7 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className='bg-gray-300 rounded-lg'
+      className='bg-[#B9B4C7] rounded-lg'
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -62,10 +61,10 @@ const ContactPage = () => {
       <div className="p-28 flex justify-center items-center">
         <div className="w-full max-w-xl">
           <motion.h1
-             className="text-4xl sm:text-6xl font-bold leading-tight "
+             className="text-4xl sm:text-6xl font-bold leading-tight text-[#352F44]"
             variants={itemVariants}
           >
-            Let's Create Something <span className="text-purple-500">Amazing</span>
+            Let's Create Something <span className="text-[#5C5470]">Amazing</span>
           </motion.h1>
 
           <motion.form
@@ -81,7 +80,7 @@ const ContactPage = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
-                className="w-full bg-gray-800 text-white p-3 rounded-lg border-none focus:ring-2 focus:ring-purple-500 outline-none"
+                className="w-full bg-[#352F44] text-[#FAF0E6] p-3 rounded-lg border-none focus:ring-2 focus:ring-[#5C5470] outline-none"
                 required
               />
             </motion.div>
@@ -94,7 +93,7 @@ const ContactPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your@email.com"
-                className="w-full bg-gray-800 text-white p-3 rounded-lg border-none focus:ring-2 focus:ring-purple-500 outline-none"
+                className="w-full bg-[#352F44] text-[#FAF0E6] p-3 rounded-lg border-none focus:ring-2 focus:ring-[#5C5470] outline-none"
                 required
               />
             </motion.div>
@@ -107,14 +106,14 @@ const ContactPage = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Your Message"
                 rows="4"
-                className="w-full bg-gray-800 text-white p-3 rounded-lg border-none focus:ring-2 focus:ring-purple-500 outline-none resize-none"
+                className="w-full bg-[#352F44] text-[#FAF0E6] p-3 rounded-lg border-none focus:ring-2 focus:ring-[#5C5470] outline-none resize-none"
                 required
               ></textarea>
             </motion.div>
 
             <motion.button
               type="submit"
-              className="w-full bg-purple-500 text-white py-3 rounded-lg hover:bg-purple-600 transition-colors"
+              className="w-full bg-[#5C5470] text-[#FAF0E6] py-3 rounded-lg hover:bg-[#352F44] transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={itemVariants}
@@ -122,20 +121,6 @@ const ContactPage = () => {
               Send
             </motion.button>
 
-            {submitStatus && (
-              <motion.div
-                className={`mt-4 text-center ${
-                  submitStatus.includes('successfully') 
-                    ? 'text-green-500' 
-                    : 'text-red-500'
-                }`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                variants={itemVariants}
-              >
-                {submitStatus}
-              </motion.div>
-            )}
           </motion.form>
         </div>
       </div>
