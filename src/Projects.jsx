@@ -16,7 +16,8 @@ export default function Projects() {
       technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
       githubUrl: "https://github.com/yourusername/ecommerce-project",
       liveUrl: "https://your-ecommerce-site.com",
-      slug: "ecommerce-platform"
+      slug: "ecommerce-platform",
+      image:"./pet.jpg"
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ export default function Projects() {
       technologies: ["React", "Socket.io", "MongoDB", "Express"],
       githubUrl: "https://github.com/yourusername/task-manager",
       liveUrl: "https://your-task-app.com",
-      slug: "task-management-app"
+      slug: "task-management-app",
+      image:""
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ export default function Projects() {
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       githubUrl: "https://github.com/yourusername/portfolio",
       liveUrl: "https://your-portfolio.com",
-      slug: "portfolio-website"
+      slug: "portfolio-website",
+      image:""
     },
     {
       id: 4,
@@ -43,7 +46,8 @@ export default function Projects() {
       technologies: ["React", "Chart.js", "Firebase", "Material UI"],
       githubUrl: "https://github.com/yourusername/social-dashboard",
       liveUrl: "https://your-social-dashboard.com",
-      slug: "social-media-dashboard"
+      slug: "social-media-dashboard",
+      image:""
     }
   ];
 
@@ -117,18 +121,28 @@ export default function Projects() {
               scale: 1.03,
               boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
             }}
+            
             onClick={() => setSelectedProject(project)}
           >
             {/* Project Image Placeholder - Replace with actual project images */}
             <motion.div 
-              className="h-56 bg-[#B9B4C7] flex items-center justify-center"
-              whileHover={{ 
-                backgroundColor: "#a8a2b8",
-                transition: { duration: 0.2 }
-              }}
-            >
-              <span className="text-[#352F44] text-xl font-bold">{project.title}</span>
-            </motion.div>
+  className="h-56 bg-[#B9B4C7] flex items-center justify-center relative overflow-hidden"
+  whileHover={{ 
+    backgroundColor: "#a8a2b8",
+    transition: { duration: 0.2 }
+  }}
+>
+  {/* Image container */}
+  <img 
+    src={project.image} 
+    alt='image' 
+    className='w-full h-full object-cover absolute top-0 left-0 opacity-80'
+  />
+
+  {/* Text overlay */}
+  
+</motion.div>
+
 
             <div className="p-6">
               <motion.h3 
@@ -155,7 +169,7 @@ export default function Projects() {
                 whileInView={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
               >
-                {project.technologies.map((tech, index) => (
+                {/* {project.technologies.map((tech, index) => (
                   <motion.span 
                     key={index} 
                     className="px-3 py-1 text-sm bg-[#352F44] text-[#FAF0E6] rounded-full"
@@ -164,7 +178,7 @@ export default function Projects() {
                   >
                     {tech}
                   </motion.span>
-                ))}
+                ))} */}
               </motion.div>
               
               <motion.div 
