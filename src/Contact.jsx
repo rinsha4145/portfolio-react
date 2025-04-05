@@ -53,19 +53,20 @@ const ContactPage = () => {
 
   return (
     <motion.div
-      className='bg-[#B9B4C7] rounded-lg'
+      className=' rounded-lg'
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="p-28 flex justify-center items-center">
-        <div className="w-full max-w-xl">
-          <motion.h1
-             className="text-4xl sm:text-6xl font-bold leading-tight text-[#352F44]"
+       <motion.h1
+             className="text-4xl mb-4 sm:text-6xl font-bold leading-tight text-[#352F44]"
             variants={itemVariants}
           >
-            Let's Create Something <span className="text-[#5C5470]">Amazing</span>
+            Let's Create<br/>Something <span className="text-[#5C5470]">Amazing</span>
           </motion.h1>
+      <div className="p-20 flex bg-[#B9B4C7] rounded-lg justify-center items-center">
+        <div className="w-full max-w-xl">
+         
 
           <motion.form
             onSubmit={handleSubmit}

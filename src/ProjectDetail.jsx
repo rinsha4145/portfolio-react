@@ -35,76 +35,71 @@ const ProjectDetail = ({ selectedProject, onClose }) => {
     },
     {
       id: 2,
-      title: "Task Management App",
-      description:
-        "A collaborative task management application with real-time updates and team collaboration features.",
-      technologies: ["React", "Socket.io", "MongoDB", "Express"],
-      githubUrl: "https://github.com/yourusername/task-manager",
-      liveUrl: "https://your-task-app.com",
-      slug: "task-management-app",
-      image: "",
-      challenge:
-        "Building a collaborative environment where multiple team members can manage tasks with real-time updates.",
-      solution:
-        "Used Socket.io for real-time communication, implemented drag-and-drop interfaces with React DnD, and created a notification system for task updates.",
+      title: "Pinterest Clone",
+      description: "A visually rich Pinterest-inspired web application where users can discover, save, and organize creative ideas.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "Tailwind CSS"],
+      githubUrl: "https://github.com/rinsha4145/Pinterest-cloning",
+      liveUrl: "https://pinterest-cloning-lovat.vercel.app/",
+      slug: "pinterest-clone",
+      image: "./pinterest.png",
+      challenge: "Creating a seamless and visually dynamic platform for pin creation, image uploads, and personalized boards with responsive masonry layouts.",
+      solution: "Used Cloudinary for efficient image storage, implemented responsive masonry-style grids with Tailwind CSS, and built intuitive UI components for creating, organizing, and saving pins.",
       features: [
-        "Kanban board with drag-and-drop functionality",
-        "Task assignment and priority setting",
-        "Comment threads on tasks",
-        "File attachments and sharing",
-        "Dashboard with team productivity metrics",
+        "User authentication with email and Google OAuth",
+        "Pin creation with title, description, and image upload",
+        "Custom boards for organizing saved pins",
+        "Like, comment, and save functionality",
+        "Responsive masonry layout for dynamic content display"
       ],
-      results:
-        "Improved team productivity by 30% and reduced task handover time by implementing clear workflow stages and notification systems.",
+      results: "Delivered a Pinterest-like experience with fast image loading, clean UI, and personalized boards, enhancing user engagement and content discovery."
     },
+    
     {
       id: 3,
-      title: "Portfolio Website",
-      description:
-        "A responsive personal portfolio website showcasing projects and skills.",
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com/yourusername/portfolio",
-      liveUrl: "https://your-portfolio.com",
-      slug: "portfolio-website",
-      image: "",
-      challenge:
-        "Creating a visually appealing and performance-optimized portfolio that highlights skills and projects effectively.",
-      solution:
-        "Used Tailwind CSS for responsive design and Framer Motion for smooth animations. Implemented lazy loading for images and code splitting for improved performance.",
+      title: "Findly – Job Search Platform",
+      description: "A feature-rich job search platform built with Next.js and TypeScript, offering a scalable, type-safe, and SEO-optimized experience for job seekers and employers.",
+      technologies: ["Next.js", "TypeScript", "Socket.IO", "Redux Toolkit", "Tailwind CSS", "REST API"],
+      githubUrl: "https://github.com/rinsha4145/findly_clientside", 
+      liveUrl: "https://your-findly-platform.vercel.app", // Replace with actual live URL
+      slug: "findly-job-platform",
+      image: "https://your-image-link.com/findly-preview.png", // Replace with actual image link
+      challenge: "Building a high-performance job search app with real-time messaging, accurate filtering, and seamless state management while maintaining responsiveness and SEO compliance.",
+      solution: "Utilized Next.js with server-side rendering for faster load times, integrated a RESTful API for dynamic content, and used Socket.IO for real-time chat between employers and applicants. State management was handled via Redux Toolkit for an optimized user experience.",
       features: [
-        "Responsive design for all device sizes",
-        "Animated UI components with Framer Motion",
-        "Dark/light mode toggle",
-        "Contact form with email.js integration",
-        "Project filtering by technology",
+        "SEO-optimized SSR with Next.js",
+        "Real-time messaging with Socket.IO",
+        "Advanced job filtering and categorization",
+        "Secure user authentication system",
+        "Responsive and accessible UI using Tailwind CSS",
+        "Redux Toolkit for robust state management"
       ],
-      results:
-        "Received positive feedback on design and user experience, leading to several client inquiries and collaborations.",
-    },
-    {
-      id: 4,
-      title: "Social Media Dashboard",
-      description:
-        "A comprehensive dashboard for monitoring social media metrics and engagement across multiple platforms.",
-      technologies: ["React", "Chart.js", "Firebase", "Material UI"],
-      githubUrl: "https://github.com/yourusername/social-dashboard",
-      liveUrl: "https://your-social-dashboard.com",
-      slug: "social-media-dashboard",
-      image: "",
-      challenge:
-        "Aggregating data from multiple social media APIs and presenting insights in an intuitive and actionable format.",
-      solution:
-        "Created a modular architecture for API integrations and used Chart.js for data visualization. Implemented Firebase for real-time data updates and user authentication.",
-      features: [
-        "Integration with Twitter, Instagram, and Facebook APIs",
-        "Real-time engagement metrics",
-        "Customizable dashboard widgets",
-        "Scheduled reporting via email",
-        "Competitor analysis tools",
-      ],
-      results:
-        "Helped marketing teams optimize their social media strategies, resulting in an average 25% increase in engagement metrics for clients.",
-    },
+      results: "Enhanced user engagement by 65% through real-time communication and precise search filtering, resulting in faster job application turnaround and improved platform performance."
+    }
+    
+    // {
+    //   id: 4,
+    //   title: "Social Media Dashboard",
+    //   description:
+    //     "A comprehensive dashboard for monitoring social media metrics and engagement across multiple platforms.",
+    //   technologies: ["React", "Chart.js", "Firebase", "Material UI"],
+    //   githubUrl: "https://github.com/yourusername/social-dashboard",
+    //   liveUrl: "https://your-social-dashboard.com",
+    //   slug: "social-media-dashboard",
+    //   image: "",
+    //   challenge:
+    //     "Aggregating data from multiple social media APIs and presenting insights in an intuitive and actionable format.",
+    //   solution:
+    //     "Created a modular architecture for API integrations and used Chart.js for data visualization. Implemented Firebase for real-time data updates and user authentication.",
+    //   features: [
+    //     "Integration with Twitter, Instagram, and Facebook APIs",
+    //     "Real-time engagement metrics",
+    //     "Customizable dashboard widgets",
+    //     "Scheduled reporting via email",
+    //     "Competitor analysis tools",
+    //   ],
+    //   results:
+    //     "Helped marketing teams optimize their social media strategies, resulting in an average 25% increase in engagement metrics for clients.",
+    // },
   ];
 
   useEffect(() => {
