@@ -40,7 +40,7 @@ export default function About() {
             </h1>
             <div className="w-24 h-1 bg-[#B9B4C7] mt-6 mb-6"></div>
             <p className="text-lg text-[#FAF0E6] mt-4 max-w-3xl">
-             hey, Passionate about building dynamic and user-friendly web applications. 
+              Passionate about building dynamic and user-friendly web applications. 
               I specialize in turning innovative ideas into full-stack solutions using 
               MongoDB, Express.js, React, and Node.js, delivering seamless and responsive user experiences.
             </p>
@@ -59,6 +59,7 @@ export default function About() {
               >
                 View Resume
               </motion.button>
+              
               <motion.button
                 className="border-2 border-[#B9B4C7] text-[#FAF0E6] py-3 px-8 rounded-full font-medium shadow-lg hover:bg-[#5C5470] hover:border-[#5C5470] transition-all"
                 whileHover={{ scale: 1.05 }}
