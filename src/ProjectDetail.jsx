@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 const ProjectDetail = ({ selectedProject, onClose }) => {
   console.log(selectedProject);
   const [project, setProject] = useState(null);
-
-  // Sample project data - this should match your Projects component data
   const projectsData = [
     {
       id: 1,
@@ -18,7 +16,7 @@ const ProjectDetail = ({ selectedProject, onClose }) => {
       liveUrl: "https://your-ecommerce-site.com",
       slug: "ecommerce-platform",
       image: "./pet.jpg",
-      // Additional details for the detail page
+
       challenge:
         "Creating a seamless shopping experience with real-time inventory management and secure payment processing.",
       solution:
@@ -60,9 +58,9 @@ const ProjectDetail = ({ selectedProject, onClose }) => {
       description: "A feature-rich job search platform built with Next.js and TypeScript, offering a scalable, type-safe, and SEO-optimized experience for job seekers and employers.",
       technologies: ["Next.js", "TypeScript", "Socket.IO", "Redux Toolkit", "Tailwind CSS", "REST API"],
       githubUrl: "https://github.com/rinsha4145/findly_clientside", 
-      liveUrl: "https://your-findly-platform.vercel.app", // Replace with actual live URL
+      liveUrl: "", 
       slug: "findly-job-platform",
-      image: "https://your-image-link.com/findly-preview.png", // Replace with actual image link
+      image: "", 
       challenge: "Building a high-performance job search app with real-time messaging, accurate filtering, and seamless state management while maintaining responsiveness and SEO compliance.",
       solution: "Utilized Next.js with server-side rendering for faster load times, integrated a RESTful API for dynamic content, and used Socket.IO for real-time chat between employers and applicants. State management was handled via Redux Toolkit for an optimized user experience.",
       features: [
@@ -103,7 +101,7 @@ const ProjectDetail = ({ selectedProject, onClose }) => {
   ];
 
   useEffect(() => {
-    // Find the project based on the slug parameter
+  
     const foundProject = projectsData.find(
       (p) => p.slug === selectedProject.slug
     );

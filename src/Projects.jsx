@@ -7,7 +7,6 @@ import ProjectDetail from './ProjectDetail';
 export default function Projects() {
  const [selectedProject, setSelectedProject] = useState(null);
 
-  // Sample project data - replace with your actual projects
   const projectsData = [
     {
       id: 1,
@@ -34,10 +33,10 @@ export default function Projects() {
       title: "Findly – Job Search Platform",
       description: "A feature-rich job search platform built with Next.js and TypeScript, offering a scalable, type-safe, and SEO-optimized experience for job seekers and employers.",
       technologies: ["Next.js", "TypeScript", "Socket.IO", "Redux Toolkit", "Tailwind CSS", "REST API"],
-      githubUrl: "https://github.com/rinsha4145/findly_clientside", // Replace with actual GitHub URL
-      liveUrl: "https://your-findly-platform.vercel.app", // Replace with actual live URL
+      githubUrl: "https://github.com/rinsha4145/findly_clientside", 
+      liveUrl: "", 
       slug: "findly-job-platform",
-      image: "https://your-image-link.com/findly-preview.png", // Replace with actual image link
+      image: "", 
     },
     // {
     //   id: 4,

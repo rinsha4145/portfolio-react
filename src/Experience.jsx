@@ -91,9 +91,9 @@ const Experience = () => {
       </div>
 
       {/* Add Experience Button (for future expansion) */}
-      <motion.div className="text-center mt-8" variants={itemVariants}>
+      {/* <motion.div className="text-center mt-8" variants={itemVariants}>
         <p className="text-[#B9B4C7] italic">More professional experiences coming soon...</p>
-      </motion.div>
+      </motion.div> */}
     </motion.section>
   )
 }

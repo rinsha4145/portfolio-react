@@ -4,7 +4,6 @@ import { MyContext } from './Context';
 export default function Navbar() {
   const { activeBar, setActiveBar } = useContext(MyContext);
 
-  // Data for icons
   const navItems = [
     {
       id: 'about',
