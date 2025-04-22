@@ -36,7 +36,7 @@ export default function Projects() {
       githubUrl: "https://github.com/rinsha4145/findly_clientside", 
       liveUrl: "", 
       slug: "findly-job-platform",
-      image: "", 
+      image: "/findly.png", 
     },
     // {
     //   id: 4,
